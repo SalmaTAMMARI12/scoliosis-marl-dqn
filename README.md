@@ -2,6 +2,12 @@
 
 Détection automatique des 17 vertèbres sur une radiographie de colonne vertébrale (vue postéro-antérieure) à l'aide de **3 agents de Deep Q-Learning indépendants** (un par zone anatomique : HAUT / MILIEU / BAS), suivie du calcul automatique de l'**angle de Cobb** pour l'évaluation de la sévérité d'une scoliose.
 
+## Démo
+
+![Démo](assets/demo_preview.gif)
+
+Aperçu de 8 secondes ci-dessus. Vidéo complète (avec son) disponible dans [`assets/demo.mp4`](assets/demo.mp4) — cliquez sur le lien et utilisez le bouton "Download" ou "View raw" sur GitHub pour la lire (GitHub n'intègre pas de lecteur vidéo dans le rendu du README).
+
 ## Idée générale
 
 Plutôt qu'un seul agent qui doit apprendre à localiser les 17 vertèbres (du thorax haut jusqu'au bas du dos), le problème est découpé en 3 sous-tâches plus simples, chacune confiée à son propre agent :
@@ -16,7 +22,7 @@ Chaque agent est un **Dueling DQN** : il observe un patch de l'image autour de s
 
 Une fois les 17 positions prédites, le code calcule l'**angle de Cobb** à partir de l'inclinaison des plateaux vertébraux et propose une orientation clinique indicative (observation / surveillance / corset / chirurgie).
 
->  Ce projet est un travail de recherche / apprentissage. Il **ne remplace pas un diagnostic médical** et ne doit pas être utilisé en conditions cliniques réelles sans validation par un professionnel de santé.
+> Ce projet est un travail de recherche / apprentissage. Il **ne remplace pas un diagnostic médical** et ne doit pas être utilisé en conditions cliniques réelles sans validation par un professionnel de santé.
 
 ## Structure du repo
 
@@ -31,6 +37,9 @@ scoliosis/
 │   ├── agent_dqn.py             # Réseau Dueling DQN + boucle d'apprentissage
 │   ├── train.py                  # Entraînement des 3 agents (HAUT / MILIEU / BAS)
 │   └── inference.py              # Prédiction, angle de Cobb, visualisation
+├── assets/
+│   ├── demo.mp4                  # Vidéo de démonstration complète
+│   └── demo_preview.gif          # Aperçu animé affiché dans ce README
 ├── requirements.txt
 └── .gitignore
 ```
@@ -57,8 +66,8 @@ Les données ne sont **pas incluses** dans ce repo (trop volumineuses, et soumis
 ## Installation
 
 ```bash
-git clone https://github.com/<votre-utilisateur>/<votre-repo>.git
-cd <votre-repo>
+git clone https://github.com/SalmaTAMMARI12/scoliosis-marl-dqn.git
+cd scoliosis_repo
 pip install -r requirements.txt
 ```
 
@@ -108,6 +117,5 @@ Affiche un rapport détaillé (erreur de localisation par vertèbre, angle de Co
 - **Réseau** : Dueling DQN (branche `value` + branche `advantage`), CNN sur le patch image + MLP sur les scalaires de position.
 - **Calibration spécifique à la zone HAUT** : la zone V1-V6 est plus étalée verticalement, donc cet agent utilise un nombre de pas plus élevé et un pas de déplacement plus fin que MILIEU/BAS, pour limiter les sauts au-delà de la cible et stabiliser l'apprentissage.
 
-## Licence
-
-À compléter selon vos préférences (MIT recommandé pour un projet de recherche personnel). Vérifiez également la licence du dataset de radiographies utilisé avant toute republication des données elles-mêmes.
+## équipe 
+Salma TAMMARI &&  Wissal MAHBOUB && Hiba HAMDOUNI && Assmaa EL HIDANI
