@@ -112,4 +112,4 @@ Affiche un rapport détaillé (erreur de localisation par vertèbre, angle de Co
 - **Calibration spécifique à la zone HAUT** : la zone V1-V6 est plus étalée verticalement, donc cet agent utilise un nombre de pas plus élevé et un pas de déplacement plus fin que MILIEU/BAS, pour limiter les sauts au-delà de la cible et stabiliser l'apprentissage.
 
 ## équipe 
-Salma TAMMARI && Hiba HAMDOUNI && Wissal mahboub && Assmaa EL HIDANI 
+Salma TAMMARI -  Hiba HAMDOUNI -  Wissal mahboub -  Assmaa EL HIDANI 
