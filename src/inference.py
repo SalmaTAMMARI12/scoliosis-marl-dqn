@@ -7,10 +7,6 @@ from environment import ZoneEnvironment, DELTAS, STEP_SZ, IMG_W, IMG_H, MAX_STEP
 from agent_dqn import DQNAgent
 from scipy.signal import medfilt
 
-# ============================================================
-#  ANGLE DE COBB — METHODE STANDARD AVEC LISSAGE
-# ============================================================
-
 def vertebra_tilt(centers, i):
     """Calcule l'inclinaison d'une vertèbre avec lissage"""
     n = len(centers)
@@ -163,11 +159,11 @@ def predict(img_dir, label_dir, prior_dir, img_idx=0, device='cpu'):
     # Vérification de la cohérence
     diff = abs(cobb - cobb_gt)
     if diff < 5:
-        print(f'✅ Angle très proche du GT (écart: {diff:.1f}°)')
+        print(f' Angle très proche du GT (écart: {diff:.1f}°)')
     elif diff < 10:
-        print(f'⚠️ Angle modérément différent du GT (écart: {diff:.1f}°)')
+        print(f' Angle modérément différent du GT (écart: {diff:.1f}°)')
     else:
-        print(f'❌ Angle très différent du GT (écart: {diff:.1f}°)')
+        print(f' Angle très différent du GT (écart: {diff:.1f}°)')
 
     # ============================================================
     # VISUALISATION
@@ -247,4 +243,4 @@ def predict(img_dir, label_dir, prior_dir, img_idx=0, device='cpu'):
 
     return pred_final, cobb
 
-print("✅ inference.py chargé avec la méthode STANDARD LISSÉE !")
+print(" inference.py chargé avec la méthode STANDARD LISSÉE !")

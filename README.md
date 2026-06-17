@@ -16,7 +16,7 @@ Chaque agent est un **Dueling DQN** : il observe un patch de l'image autour de s
 
 Une fois les 17 positions prédites, le code calcule l'**angle de Cobb** à partir de l'inclinaison des plateaux vertébraux et propose une orientation clinique indicative (observation / surveillance / corset / chirurgie).
 
-> ⚠️ Ce projet est un travail de recherche / apprentissage. Il **ne remplace pas un diagnostic médical** et ne doit pas être utilisé en conditions cliniques réelles sans validation par un professionnel de santé.
+>  Ce projet est un travail de recherche / apprentissage. Il **ne remplace pas un diagnostic médical** et ne doit pas être utilisé en conditions cliniques réelles sans validation par un professionnel de santé.
 
 ## Structure du repo
 
