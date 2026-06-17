@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Données (trop volumineuses pour git, voir README pour les obtenir)
+data/
+priors/*.npy
+
+# Modèles entraînés (volumineux, à héberger ailleurs : Drive, Release GitHub, HF Hub...)
+models/
+*.pth
+
+# Résultats / sorties générées
+results/
+*.png
+*.jpg
+!notebooks/assets/*.png
+
+# Environnements
+.venv/
+venv/
+env/
+
+# Colab / Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
