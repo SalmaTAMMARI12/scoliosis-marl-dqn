@@ -104,7 +104,8 @@ pred_centers, cobb, cobb_info, cobb_gt_info = predict(
 Affiche un rapport détaillé (erreur de localisation par vertèbre, angle de Cobb prédit vs ground truth, vertèbres responsables de la courbure) et sauvegarde une visualisation dans `results/`.
 
 ## Résultats 
-<img width="469" height="1390" alt="output1" src="https://github.com/user-attachments/assets/d11d6152-24f0-4a18-a5af-9c9629c1b476" />
+<img width="469" height="1390" alt="téléchargement" src="https://github.com/user-attachments/assets/142b4444-4e72-4c07-966c-93225716e90a" />
+
 
 
 ## Détails techniques
