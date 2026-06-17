@@ -37,6 +37,10 @@ scoliosis/
 
 Le notebook est la source de vérité (pensé pour tourner sur Google Colab avec GPU) ; les fichiers dans `src/` sont les mêmes scripts extraits pour pouvoir les lire, versionner et faire des diffs proprement sans ouvrir le `.ipynb`.
 
+## Architecture de la solution
+<img width="1536" height="1024" alt="ChatGPT Image 17 juin 2026, 13_54_52" src="https://github.com/user-attachments/assets/b05f98ae-3af9-4145-9595-7b1769712262" />
+
+
 ## Données attendues
 
 Le projet utilise des images de radiographie + fichiers `.mat` contenant les coordonnées des 4 coins de chacune des 17 vertèbres (format `p2`, 68 points × 2 coordonnées), typique du dataset **AASCE / SpineWeb** (boostnet) pour l'évaluation automatique de la scoliose.
