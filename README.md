@@ -57,8 +57,7 @@ Les données ne sont **pas incluses** dans ce repo (trop volumineuses, et soumis
 ## Installation
 
 ```bash
-git clone https://github.com/<votre-utilisateur>/<votre-repo>.git
-cd <votre-repo>
+git clone https://github.com/SalmaTAMMARI12/scoliosis-marl-dqn.git
 pip install -r requirements.txt
 ```
 
